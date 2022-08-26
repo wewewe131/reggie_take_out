@@ -29,7 +29,7 @@ public class LoginCheckFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         //获取请求路径
         String requestUrl = request.getRequestURI();
-        String[] noCheck = {"/employee/login","/employee/logout","/backend/**","/front/**"};
+        String[] noCheck = {"/employee/login","/employee/logout","/backend/**","/front/**","/common/**","/user/sendMsg","/user/login"};
         //如果校验通过，则放行
         if (check(requestUrl,noCheck)){
             log.info("无需登录校验的请求:{}",requestUrl);
@@ -40,10 +40,20 @@ public class LoginCheckFilter implements Filter {
         //尝试从session域中取出用户id，如果存在则已登录
         //检验是否登录，如果已经登录则放行
         if (request.getSession().getAttribute("employee") != null){
-            log.info("登录拦截器拦截到请求:{}，用户已登录,用户id为",requestUrl,request.getSession().getAttribute("employee"));
+            log.info("登录拦截器拦截到请求:{}，用户已登录,用户id为{}",requestUrl,request.getSession().getAttribute("employee"));
 
             Long employee = (Long)request.getSession().getAttribute("employee");
             BaseContext.setCurrentId(employee);//将用户id存入当前线程的共享变量中
+            //如果未登录则getSession().getAttribute("employee") == null
+            filterChain.doFilter(request,response);
+            return;
+        }
+
+        if (request.getSession().getAttribute("user") != null){
+            log.info("登录拦截器拦截到请求:{}，用户已登录,用户id为{}",requestUrl,request.getSession().getAttribute("user"));
+
+            Long userid = (Long)request.getSession().getAttribute("user");
+            BaseContext.setCurrentId(userid);//将用户id存入当前线程的共享变量中
             //如果未登录则getSession().getAttribute("employee") == null
             filterChain.doFilter(request,response);
             return;

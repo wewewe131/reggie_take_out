@@ -1,11 +1,13 @@
+import com.reggie.Utils.SmsUtils;
 import org.springframework.util.AntPathMatcher;
 
 public class test {
     public static final AntPathMatcher PATH_MATCHER = new AntPathMatcher();
 
     public static void main(String[] args) {
-        String[] noCheck = {"/employee/login", "/employee/logout", "/backend/**", "front/**"};
-        System.out.println(check("/backend/index.html", noCheck));
+//        String[] noCheck = {"/employee/login", "/employee/logout", "/backend/**", "front/**"};
+//        System.out.println(check("/backend/index.html", noCheck));
+//        new SmsUtils(). singleSend("18229833471","10013","3");
         return;
     }
 

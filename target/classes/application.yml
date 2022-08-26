@@ -18,3 +18,7 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: ASSIGN_ID
+
+#配置文件上传的位置
+reggieFile:
+  uploadPath: I:\ProjectResource\IDEA\reggie_take_out\

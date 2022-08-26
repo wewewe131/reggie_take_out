@@ -28,4 +28,15 @@ public class GlobalExceptionHandler {
 
         return R.error("数据库异常");
     }
+
+    /**
+     * 拦截捕获自定义异常
+     * @param e
+     * @return
+     */
+    @ExceptionHandler(CustomException.class)
+    public R handleCustomException(CustomException e) {
+        log.error("自定义异常", e.getMessage());
+        return R.error(e.getMessage());
+    }
 }
