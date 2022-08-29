@@ -1,0 +1,151 @@
+2022-08-26 16:48:23.820 长连接,使用账号[E10GU4]的主IP信息[192.169.3.223:8089]第一次请求网关或者主IP恢复正常，使用主IP请求网关。
+2022-08-26 16:48:29.233 向网关请求失败！
+org.apache.http.conn.ConnectTimeoutException: Connect to /192.169.3.223:8089 timed out
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:125)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:123)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:147)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:108)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:415)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:641)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:597)
+	at com.montnets.mwgate.smsutil.HttpPostBiz.executeKeepAliveNotUrlEncodePost(HttpPostBiz.java:202)
+	at com.montnets.mwgate.smsutil.SmsSendBiz.sendSmsByKeepAlive(SmsSendBiz.java:154)
+	at com.montnets.mwgate.smsutil.SmsSendConn.singleSend(SmsSendConn.java:167)
+	at com.reggie.Utils.SmsUtils.singleSend(SmsUtils.java:58)
+	at com.reggie.Utils.SmsUtils.main(SmsUtils.java:29)
+
+2022-08-26 16:48:34.236 向网关请求失败！
+org.apache.http.conn.ConnectTimeoutException: Connect to /192.169.3.223:8089 timed out
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:125)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:123)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:147)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:108)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:415)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:641)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:597)
+	at com.montnets.mwgate.smsutil.HttpPostBiz.executeKeepAliveNotUrlEncodePost(HttpPostBiz.java:202)
+	at com.montnets.mwgate.smsutil.SmsSendBiz.sendSmsByKeepAlive(SmsSendBiz.java:207)
+	at com.montnets.mwgate.smsutil.SmsSendConn.singleSend(SmsSendConn.java:167)
+	at com.reggie.Utils.SmsUtils.singleSend(SmsUtils.java:58)
+	at com.reggie.Utils.SmsUtils.main(SmsUtils.java:29)
+
+2022-08-26 16:48:34.238 长连接,账号[E10GU4]的主IP[192.169.3.223],端口：8089异常,将添加到异常主IP集合中检测。该账号有备IP,备IP信息为192.169.1.189:8086,将切换到备IP。待主IP恢复正常后，再切换回主IP。
+2022-08-26 16:49:24.379 验证端口不合法,错误码:-300005,端口://api01.monyun.cn
+java.lang.NumberFormatException: For input string: "//api01.monyun.cn"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:569)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.montnets.mwgate.common.ValidateParamTool.validatePort(ValidateParamTool.java:477)
+	at com.montnets.mwgate.common.ValidateParamTool.validateIpAndPort(ValidateParamTool.java:414)
+	at com.montnets.mwgate.smsutil.ConfigManager.setAccountInfo(ConfigManager.java:153)
+	at com.reggie.Utils.SmsUtils.setAccountInfo(SmsUtils.java:95)
+	at com.reggie.Utils.SmsUtils.main(SmsUtils.java:22)
+
+2022-08-26 16:49:24.436 账号不存在或者账号不可用,错误码:-310008,账号:E10GU4
+2022-08-26 16:49:29.490 验证端口不合法,错误码:-300005,端口://api01.monyun.cn
+java.lang.NumberFormatException: For input string: "//api01.monyun.cn"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:569)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.montnets.mwgate.common.ValidateParamTool.validatePort(ValidateParamTool.java:477)
+	at com.montnets.mwgate.common.ValidateParamTool.validateIpAndPort(ValidateParamTool.java:414)
+	at com.montnets.mwgate.smsutil.ConfigManager.setAccountInfo(ConfigManager.java:153)
+	at com.reggie.Utils.SmsUtils.setAccountInfo(SmsUtils.java:95)
+	at com.reggie.Utils.SmsUtils.main(SmsUtils.java:22)
+
+2022-08-26 16:49:29.544 账号不存在或者账号不可用,错误码:-310008,账号:E10GU4
+2022-08-26 16:49:34.040 验证端口不合法,错误码:-300005,端口://api01.monyun.cn
+java.lang.NumberFormatException: For input string: "//api01.monyun.cn"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:569)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.montnets.mwgate.common.ValidateParamTool.validatePort(ValidateParamTool.java:477)
+	at com.montnets.mwgate.common.ValidateParamTool.validateIpAndPort(ValidateParamTool.java:414)
+	at com.montnets.mwgate.smsutil.ConfigManager.setAccountInfo(ConfigManager.java:153)
+	at com.reggie.Utils.SmsUtils.setAccountInfo(SmsUtils.java:95)
+	at com.reggie.Utils.SmsUtils.main(SmsUtils.java:22)
+
+2022-08-26 16:49:34.091 账号不存在或者账号不可用,错误码:-310008,账号:E10GU4
+2022-08-26 16:49:41.743 长连接,使用账号[E10GU4]的主IP信息[192.169.3.223:8089]第一次请求网关或者主IP恢复正常，使用主IP请求网关。
+2022-08-26 16:49:47.041 向网关请求失败！
+org.apache.http.conn.ConnectTimeoutException: Connect to /192.169.3.223:8089 timed out
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:125)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:123)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:147)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:108)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:415)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:641)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:597)
+	at com.montnets.mwgate.smsutil.HttpPostBiz.executeKeepAliveNotUrlEncodePost(HttpPostBiz.java:202)
+	at com.montnets.mwgate.smsutil.SmsSendBiz.sendSmsByKeepAlive(SmsSendBiz.java:154)
+	at com.montnets.mwgate.smsutil.SmsSendConn.singleSend(SmsSendConn.java:167)
+	at com.reggie.Utils.SmsUtils.singleSend(SmsUtils.java:58)
+	at com.reggie.Utils.SmsUtils.main(SmsUtils.java:29)
+
+2022-08-26 16:49:52.047 向网关请求失败！
+org.apache.http.conn.ConnectTimeoutException: Connect to /192.169.3.223:8089 timed out
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:125)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:123)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:147)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:108)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:415)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:641)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:597)
+	at com.montnets.mwgate.smsutil.HttpPostBiz.executeKeepAliveNotUrlEncodePost(HttpPostBiz.java:202)
+	at com.montnets.mwgate.smsutil.SmsSendBiz.sendSmsByKeepAlive(SmsSendBiz.java:207)
+	at com.montnets.mwgate.smsutil.SmsSendConn.singleSend(SmsSendConn.java:167)
+	at com.reggie.Utils.SmsUtils.singleSend(SmsUtils.java:58)
+	at com.reggie.Utils.SmsUtils.main(SmsUtils.java:29)
+
+2022-08-26 16:49:52.048 长连接,账号[E10GU4]的主IP[192.169.3.223],端口：8089异常,将添加到异常主IP集合中检测。该账号有备IP,备IP信息为192.169.1.189:8086,将切换到备IP。待主IP恢复正常后，再切换回主IP。
+2022-08-26 16:50:26.005 验证端口不合法,错误码:-300005,端口://api01.monyun.cn
+java.lang.NumberFormatException: For input string: "//api01.monyun.cn"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:569)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.montnets.mwgate.common.ValidateParamTool.validatePort(ValidateParamTool.java:477)
+	at com.montnets.mwgate.common.ValidateParamTool.validateIpAndPort(ValidateParamTool.java:414)
+	at com.montnets.mwgate.smsutil.ConfigManager.setAccountInfo(ConfigManager.java:153)
+	at com.reggie.Utils.SmsUtils.setAccountInfo(SmsUtils.java:95)
+	at com.reggie.Utils.SmsUtils.main(SmsUtils.java:22)
+
+2022-08-26 16:50:26.054 账号不存在或者账号不可用,错误码:-310008,账号:E10GU4
+2022-08-26 16:50:38.298 验证端口不合法,错误码:-300005,端口://api01.monyun.cn
+java.lang.NumberFormatException: For input string: "//api01.monyun.cn"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:569)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.montnets.mwgate.common.ValidateParamTool.validatePort(ValidateParamTool.java:477)
+	at com.montnets.mwgate.common.ValidateParamTool.validateIpAndPort(ValidateParamTool.java:414)
+	at com.montnets.mwgate.smsutil.ConfigManager.setAccountInfo(ConfigManager.java:153)
+	at com.reggie.Utils.SmsUtils.setAccountInfo(SmsUtils.java:95)
+	at com.reggie.Utils.SmsUtils.main(SmsUtils.java:22)
+
+2022-08-26 16:50:38.346 账号不存在或者账号不可用,错误码:-310008,账号:E10GU4
+2022-08-26 16:52:57.598 设置发送账号[E10GU4]信息时,通过主域名[api01.monyun.cn]获取到主IP[114.67.62.211],端口:7901
+2022-08-26 16:52:57.642 设置发送账号[E10GU4]信息时,通过备域名[api02.monyun.cn]获取到备IP[114.67.62.211],端口:7901
+2022-08-26 16:52:57.698 长连接,使用账号[E10GU4]的主IP信息[114.67.62.211:7901]第一次请求网关或者主IP恢复正常，使用主IP请求网关。
+2022-08-26 16:54:34.129 设置发送账号[E10GU4]信息时,通过主域名[api01.monyun.cn]获取到主IP[114.67.62.211],端口:7901
+2022-08-26 16:54:34.150 设置发送账号[E10GU4]信息时,通过备域名[api02.monyun.cn]获取到备IP[114.67.62.211],端口:7901
+2022-08-26 16:54:34.197 长连接,使用账号[E10GU4]的主IP信息[114.67.62.211:7901]第一次请求网关或者主IP恢复正常，使用主IP请求网关。
+2022-08-26 16:58:00.627 设置发送账号[E10GU4]信息时,通过主域名[api01.monyun.cn]获取到主IP[114.67.62.211],端口:7901
+2022-08-26 16:58:00.650 设置发送账号[E10GU4]信息时,通过备域名[api02.monyun.cn]获取到备IP[114.67.62.211],端口:7901
+2022-08-26 16:58:00.699 长连接,使用账号[E10GU4]的主IP信息[114.67.62.211:7901]第一次请求网关或者主IP恢复正常，使用主IP请求网关。
+2022-08-26 16:59:59.203 设置发送账号[E10GU4]信息时,通过主域名[api01.monyun.cn]获取到主IP[114.67.62.211],端口:7901
+2022-08-26 16:59:59.222 设置发送账号[E10GU4]信息时,通过备域名[api02.monyun.cn]获取到备IP[114.67.62.211],端口:7901
+2022-08-26 16:59:59.271 长连接,使用账号[E10GU4]的主IP信息[114.67.62.211:7901]第一次请求网关或者主IP恢复正常，使用主IP请求网关。
+2022-08-26 17:07:10.003 设置发送账号[E10GU4]信息时,通过主域名[api01.monyun.cn]获取到主IP[114.67.62.211],端口:7901
+2022-08-26 17:07:10.023 设置发送账号[E10GU4]信息时,通过备域名[api02.monyun.cn]获取到备IP[114.67.62.211],端口:7901
+2022-08-26 17:07:10.072 长连接,使用账号[E10GU4]的主IP信息[114.67.62.211:7901]第一次请求网关或者主IP恢复正常，使用主IP请求网关。
+2022-08-26 18:00:27.112 设置发送账号[E10GU4]信息时,通过主域名[api01.monyun.cn]获取到主IP[114.67.62.211],端口:7901
+2022-08-26 18:00:27.135 设置发送账号[E10GU4]信息时,通过备域名[api02.monyun.cn]获取到备IP[114.67.62.211],端口:7901
+2022-08-26 18:00:27.186 长连接,使用账号[E10GU4]的主IP信息[114.67.62.211:7901]第一次请求网关或者主IP恢复正常，使用主IP请求网关。
+2022-08-26 18:07:39.415 设置发送账号[E10GU4]信息时,通过主域名[api01.monyun.cn]获取到主IP[114.67.62.211],端口:7901
+2022-08-26 18:07:39.435 设置发送账号[E10GU4]信息时,通过备域名[api02.monyun.cn]获取到备IP[114.67.62.211],端口:7901
+2022-08-26 18:07:39.512 长连接,使用账号[E10GU4]的主IP信息[114.67.62.211:7901]第一次请求网关或者主IP恢复正常，使用主IP请求网关。
+2022-08-26 21:33:19.799 设置发送账号[E10GU4]信息时,通过主域名[api01.monyun.cn]获取到主IP[114.67.62.211],端口:7901
+2022-08-26 21:33:19.817 设置发送账号[E10GU4]信息时,通过备域名[api02.monyun.cn]获取到备IP[114.67.62.211],端口:7901
+2022-08-26 21:33:19.823 长连接,使用账号[E10GU4]的主IP信息[114.67.62.211:7901]第一次请求网关或者主IP恢复正常，使用主IP请求网关。
+2022-08-26 23:56:40.090 设置发送账号[E10GU4]信息时,通过主域名[api01.monyun.cn]获取到主IP[114.67.62.211],端口:7901
+2022-08-26 23:56:40.110 设置发送账号[E10GU4]信息时,通过备域名[api02.monyun.cn]获取到备IP[114.67.62.211],端口:7901
+2022-08-26 23:56:40.114 长连接,使用账号[E10GU4]的主IP信息[114.67.62.211:7901]第一次请求网关或者主IP恢复正常，使用主IP请求网关。
