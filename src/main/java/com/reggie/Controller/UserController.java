@@ -34,8 +34,9 @@ public class UserController {
         if (StringUtils.isNotEmpty(phone)){
             String code = ValidateCodeUtils.generateValidateCode4String(6);
             //手机号 验证码 过期时间（还没做）
-            SmsUtils.singleSend(phone,code,"10");
-
+            //节约条数，先注掉
+//            SmsUtils.singleSend(phone,code,"10");
+            log.info("验证码："+code);
             httpSession.setAttribute(phone,code);
 
             R.success("手机验证码短信发送成功");

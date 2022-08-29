@@ -20,4 +20,8 @@ public class test {
         }
         return false;
     }
+    public int[] runningSum(int[] nums) {
+
+        return null;
+    }
 }
