@@ -28,6 +28,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 
     }
 
+
     @Override
     public void updateFill(MetaObject metaObject) {
         long threadId = Thread.currentThread().getId();
